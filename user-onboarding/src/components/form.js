@@ -28,6 +28,7 @@ export default function Form(props) {
       <label>
         Name:
         <input
+          id="name"
           value={values.name}
           onChange={onInputChange}
           name="name"
@@ -38,6 +39,7 @@ export default function Form(props) {
       <label>
         Email:
         <input
+          id="email"
           value={values.email}
           onChange={onInputChange}
           name="email"
@@ -48,6 +50,7 @@ export default function Form(props) {
       <label>
         Password:
         <input
+          id="password"
           value={values.password}
           onChange={onInputChange}
           name="password"
@@ -67,9 +70,9 @@ export default function Form(props) {
       <br />
       <button disabled={disabled}>Submit</button>
       <div className="errors">
-        <div>{errors.name}</div>
-        <div>{errors.email}</div>
-        <div>{errors.password}</div>
+        <div id="errName">{errors.name}</div>
+        <div id="errEmail">{errors.email}</div>
+        <div id="errPassword">{errors.password}</div>
       </div>
     </form>
   );
